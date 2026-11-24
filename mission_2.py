@@ -7,15 +7,18 @@ from distance_sensor import AndySensor
 
 def MissionTwo(robot:DriveBase, left_attachment_motor, right_attachment_motor, eyes: AndySensor):
     print("Mission Two")
+   
+   def MissionTwo(robot:DriveBase, left_attachment_motor, right_attachment_motor, eyes: AndySensor):
+    print("Mission Two")
+   
    #drone survey
    #make sure to hit tab
    #download mission main.
-
-    robot.straight(700)
-    robot.straight(-300)
-    robot.turn(-90)
-    robot.straight(300)
-    robot.turn(90)
-    robot.straight(1250)
-    robot.turn (90)
-    robot.straight(20)
+   #Straight to  push up LIDAR
+    robot.straight(743)
+    # Turn and Push 
+    robot.turn(-70)
+    # Turn Back
+    robot.turn(70)
+    #go Backwards
+    robot.straight(-743)
