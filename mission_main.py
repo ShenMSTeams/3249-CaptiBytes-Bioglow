@@ -8,8 +8,8 @@ from mission_1 import MissionOne
 from mission_2 import MissionTwo
 from mission_3 import MissionThree
 from mission_4 import MissionFour
-#from mission_eight import MissionEight
-#from mission_nine import MissionNine
+from mission_5 import MissionFive
+from mission_6 import MissionSix
 #from mission_ten import MissionTen
 from distance_sensor import AndySensor
 
@@ -38,9 +38,13 @@ class MyMissions():
 
     
 
-    #@Mission(8)
-    #def go_mission_eight(*robot):
-    #    MissionEight(*robot)
+    @Mission(5)
+    def go_mission_five(*robot):
+        MissionFive(*robot)
+
+    @Mission(6)
+    def go_mission_six(*robot):
+        MissionSix(*robot)
 
     #@Mission(9)
     #def go_mission_nine(*robot):
@@ -61,7 +65,7 @@ hub.display.orientation(Side.TOP)
 left_motor = Motor(Port.A, Direction.COUNTERCLOCKWISE)
 right_motor = Motor(Port.E, Direction.CLOCKWISE)
 robot = DriveBase(left_motor, right_motor,
-                  wheel_diameter=62.4, axle_track=85.7)
+                  wheel_diameter=62.4, axle_track=98)
 robot.use_gyro(True)
 
 left_attachment_motor = Motor(Port.D, Direction.CLOCKWISE,  [12, 20])
